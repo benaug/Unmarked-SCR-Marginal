@@ -26,5 +26,7 @@ These are more limited (e.g., no habitat mask, density covariates), but can be m
 Peruse my github repositories for various extensions of unmarked SCR with partial IDs.
 
 Analogous repositories in the "Marginal Unmarked Trilogy" can be found here:
+
 SCR with random thinning: https://github.com/benaug/Random-Thin-Marginal
+
 Spatial mark-resight: https://github.com/benaug/Spatial-Mark-Resight-Marginal
