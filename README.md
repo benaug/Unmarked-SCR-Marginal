@@ -23,10 +23,12 @@ https://github.com/benaug/UnmarkedSCR
 
 These are more limited (e.g., no habitat mask, density covariates), but can be modified.
 
-Peruse my github repositories for various extensions of unmarked SCR with partial IDs.
-
-Analogous repositories in the "Marginal Unmarked Trilogy" can be found here:
+Analogous repositories for different combinations of marked and unmarked data types can be found here:
 
 SCR with random thinning: https://github.com/benaug/Random-Thin-Marginal
 
 Spatial mark-resight: https://github.com/benaug/Spatial-Mark-Resight-Marginal
+
+SCR with integrated occupancy data: https://github.com/benaug/SCR_Dcov_IntegratedOccupancy
+
+Peruse my github repositories for various extensions of unmarked SCR with partial IDs.
