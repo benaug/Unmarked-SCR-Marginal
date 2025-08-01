@@ -96,6 +96,8 @@ zSampler <- nimbleFunction(
           
           #turn off
           bigLam.proposed <- bigLam.initial - model$lam[g,pick,1:J] #subtract these out before calculate
+          #make sure you didn't end up with any negative numbers due to machine precision
+          bigLam.proposed[bigLam.proposed<0] <- 0
           model$calculate(lam.nodes[pick])
           model$bigLam[g,1:J] <<- bigLam.proposed
           model$calculate(lam.noID.nodes)
