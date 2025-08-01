@@ -79,6 +79,7 @@ sSampler <- nimbleFunction(
         lp_proposed_s <- model$calculate(s.nodes) #proposed logprob for s.nodes
         #subtract these out before calculating lam
         bigLam.proposed <- bigLam.initial - model$lam[i,]
+        bigLam.proposed[bigLam.proposed<0] <- 0
         model$calculate(lam.nodes) #update lam nodes
         #add these in after calculating lam
         bigLam.proposed <- bigLam.proposed + model$lam[i,]
