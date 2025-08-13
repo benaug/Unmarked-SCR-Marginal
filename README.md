@@ -7,7 +7,7 @@ To speed up computation, I use the approach of Herliansyah et al. (2024, section
 
 https://link.springer.com/article/10.1007/s13253-023-00598-3
 
-These models use count prior data augmentation: https://github.com/benaug/SCR-Count-Prior-Data-Augmentation
+These models use N-prior data augmentation: https://github.com/benaug/SCR-N-Prior-Data-Augmentation
 
 There are 4 types of models: 
 1) Single session
