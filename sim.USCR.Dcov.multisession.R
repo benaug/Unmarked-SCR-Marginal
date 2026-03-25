@@ -1,7 +1,7 @@
 sim.USCR.Dcov.multisession <-
   function(N.session=NA,D.beta0=NA,D.beta1=NA,D.cov=NA,InSS=NA,res=NA,
            lam0=NA,theta.d=NA,sigma=NA,K=NA,X=X,xlim=NA,ylim=NA,
-           p0=NA,theta.thin=NA,K1D=NA,obstype="poisson"){
+           p0=NA,K1D=NA,obstype="poisson"){
     if(length(D.beta0)!=N.session)stop("D.beta0 must be of length N.session")
     if(length(D.beta1)!=N.session)stop("D.beta1 must be of length N.session")
     if(length(sigma)!=N.session)stop("sigma must be of length N.session")

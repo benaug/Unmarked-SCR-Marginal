@@ -114,7 +114,7 @@ for(g in 1:N.session){
 #data set over and over if you don't use different seeds here for each data set you simulate
 set.seed(14353244) #change seed for new data set
 data <- sim.USCR.Dcov.multisession(N.session=N.session,lam0=lam0,sigma=sigma,
-                                 theta.thin=theta.thin,K=K,X=X,obstype="poisson",
+                                 K=K,X=X,obstype="poisson",
                                  D.beta0=D.beta0,D.beta1=D.beta1,D.cov=D.cov,InSS=InSS,
                                  res=res,xlim=xlim,ylim=ylim)
 
@@ -156,7 +156,7 @@ nimbuild <- init.USCR.Dcov.multisession(data,inits,M=M)
 N.init <- rowSums(nimbuild$z.init,na.rm=TRUE) #N and z inits must be consistent
 D0.init <- rowSums(nimbuild$z.init,na.rm=TRUE)/(rowSums(nimbuild$InSS)*nimbuild$cellArea)
 
-Niminits <- list(N=N.init,z=nimbuild$z.init,s=nimbuild$s.init,theta.thin=rep(0.5,N.session),
+Niminits <- list(N=N.init,z=nimbuild$z.init,s=nimbuild$s.init,
                  lam0.fixed=0.5,sigma.fixed=0.5,D0=D0.init,D.beta1=rep(0,N.session))
 
 #constants for Nimble

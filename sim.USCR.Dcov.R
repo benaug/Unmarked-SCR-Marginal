@@ -7,7 +7,7 @@ e2dist <- function (x, y){
 sim.USCR.Dcov <-
   function(D.beta0=NA,D.beta1=NA,D.cov=NA,InSS=NA,res=NA,lam0=NA,p0=NA,
            sigma=NA,theta.d=NA,K=NA,X=NA,xlim=NA,ylim=NA,
-           obstype="poisson",theta.thin=NA,K1D=NA){
+           obstype="poisson",K1D=NA){
     library(abind)
     #get expected N
     cellArea <- res^2

@@ -113,7 +113,7 @@ nimbuild <- init.USCR.Dcov(data,inits,M=M)
 D0.init <- sum(nimbuild$z)/(sum(data$InSS)*data$res^2)
 Niminits <- list(z=nimbuild$z,N=sum(nimbuild$z), #z and N inits must be consistent
                  D0=D0.init,D.beta1=0,
-                 s=nimbuild$s,sigma=inits$sigma,lam0=inits$lam0,theta.thin=0.5)
+                 s=nimbuild$s,sigma=inits$sigma,lam0=inits$lam0)
 
 #constants for Nimble
 constants <- list(M=M,J=J,D.cov=data$D.cov,cellArea=data$cellArea,n.cells=data$n.cells,

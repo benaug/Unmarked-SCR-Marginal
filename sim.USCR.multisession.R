@@ -17,7 +17,7 @@ getArea <- function(X=X,buff=buff){
 
 sim.USCR.multisession <-
   function(N.session=NA,lambda.N=NA,lam0=NA,theta.d=NA,sigma=NA,K=NA,X=X,buff=NA,
-           p0=NA,theta.thin=NA,K1D=NA,obstype="poisson"){
+           p0=NA,K1D=NA,obstype="poisson"){
     if(length(sigma)!=N.session)stop("sigma must be of length N.session")
     if(length(K)!=N.session)stop("K must be of length N.session")
     if(length(X)!=N.session)stop("X must be of length N.session")
