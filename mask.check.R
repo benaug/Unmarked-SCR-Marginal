@@ -7,7 +7,10 @@ mask.check <- function(dSS=NA,cells=NA,n.cells=NA,n.cells.x=NA,n.cells.y=NA,res=
   if(dim(cells)[2]!=n.cells.y)stop("'cells' should be of length 'n.cells.y'")
   if(!all(abs(range(x.vals) + c(-res/2, res/2) - xlim) < 1e-9))stop("x.vals doesn't match up with xlim")
   if(!all(abs(range(y.vals) + c(-res/2, res/2) - ylim) < 1e-9))stop("y.vals doesn't match up with ylim")
-  
+  expected.dSS <- as.matrix(expand.grid(x.vals, y.vals))
+  if(!all(abs(dSS - expected.dSS) < 1e-9)){
+    stop("'dSS' rows are not in the correct order: x must cycle through all values before y increments to the next value")
+  }
   for(i in 1:n.cells){
     s.cell.x <- i%%n.cells.x 
     s.cell.y <- floor(i/n.cells.x)+1
